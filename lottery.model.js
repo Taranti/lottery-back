@@ -13,6 +13,7 @@ const lotterySchema = new mongoose.Schema({
   infos: {
     type: Infos,
     required: false,
+    select:false
   }
 },{collection:'lottery'})
 

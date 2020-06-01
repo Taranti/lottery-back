@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(cors())
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.send('Lottery!')
 })
 
 app.listen(3000, function () {

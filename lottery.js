@@ -76,5 +76,17 @@ router.put('/', async (req, res) => {
 router.delete('/:id', (req, res) => {
 })
 
+
+router.get('/name/:firstname/:lastname',async (req, res) => {
+    try{
+        
+    const lottery= await Lottery.find({"infos.childFirstName":req.params.firstname,"infos.childName":req.params.lastname})
+    res.json(lottery.length)
+    }
+    catch(error){
+        res.status(500).json({ message: error.message })
+    }
+})
+
 module.exports = router
 
